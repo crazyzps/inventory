@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.shouma.zps.inventory.vm.BatchViewModel" />
+
+        <variable
+            name="viewModel"
+            type="BatchViewModel" />
+
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/batch_toolbar"
+                style="@style/Widget.MaterialComponents.Toolbar.Surface"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu="@menu/toolbar"
+                app:navigationIcon="@drawable/ic_arrow_back_black"
+                app:title="选择任务"
+                app:titleCentered="true"
+                app:titleTextColor="?attr/colorOnSurface" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:id="@+id/batch_card_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/batch_toolbar">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="批次编号:0000000000
+                                    批次编号:0000000000
+                                    批次编号:0000000000
+                                    批次编号:0000000000
+                                    批次编号:0000000000
+                                    批次编号:0000000000
+                                    批次编号:0000000000"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    tools:text="批次编号:0000000000
+                                    批次编号:0000000000
+                                    批次编号:0000000000
+                                    批次编号:0000000000
+                                    批次编号:0000000000
+                                    批次编号:0000000000
+                                    批次编号:0000000000" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/batch_btn_next"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:text="next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
